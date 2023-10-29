@@ -110,15 +110,22 @@ require('lazy').setup({
     },
   },
 
+  -- {
+  --   -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -126,7 +133,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
@@ -414,15 +421,15 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 end
 
-vim.keymap.set('n', '<leader>we', function ()
+vim.keymap.set('n', '<leader>we', function()
   vim.cmd('Neotree toggle reveal_force_cwd')
-end, {desc = '[W]orkspace [E]xplorer'})
+end, { desc = '[W]orkspace [E]xplorer' })
 
 -- vim.keymap.set('n', '<F9>', function ()
 --   vim.cmd('! %:p')
 -- end, {desc = 'Run shell script'})
 
-vim.keymap.set('n', '<F9>', '<cmd>:!%:p<CR>', {desc = 'Run shell script'})
+vim.keymap.set('n', '<F9>', '<cmd>:!%:p<CR>', { desc = 'Run shell script' })
 -- document existing key chains
 require('which-key').register {
   ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
