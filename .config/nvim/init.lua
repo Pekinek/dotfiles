@@ -203,12 +203,13 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 }, {})
 
+require('custom.remap')
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
-vim.o.hlsearch = true
+vim.o.hlsearch = false
 vim.o.incsearch = true
 
 -- Make line numbers default
