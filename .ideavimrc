@@ -1,6 +1,7 @@
 """ Editing and Reloading the Config
 set clipboard+=unnamed
 set clipboard+=ideaput
+set relativenumber number
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
@@ -23,17 +24,18 @@ set ideajoin
 set idearefactormode=keep
 vnoremap < <gv
 vnoremap > >gv
+
+sethandler <C-R> a:vim
 nnoremap [f :action MethodUp<CR>
 nnoremap ]f :action MethodDown<CR>
 nnoremap zc :action CollapseRegion<CR>
 nnoremap zo :action ExpandRegion<CR>
 nnoremap gc :action CommentByLineComment<CR>
-nnoremap <leader>cr :action Refactorings.QuickListPopupAction<CR>
+noremap <leader>cr :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>ca :action ShowIntentionActions<CR>
 nnoremap <leader>cg :action Generate<CR>
 nnoremap <Leader>f  :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
-nnoremap <c-r> :action RecentFiles<CR>
 nnoremap <leader>l :action RecentLocations<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
@@ -74,17 +76,5 @@ nnoremap <leader>gn :action GitNewBranchAction<CR>
 nnoremap <leader>gc :action CheckinProject<CR>
 
 " toggle which-key plugin
-let s:whichKeyEnabled = 0
-function! WhichKeyToggle()
-  if s:whichKeyEnabled
-    set which-key!
-    set notimeout!
-    let s:whichKeyEnabled = 0
-  else
-    set which-key
-    set notimeout
-    let s:whichKeyEnabled = 1
-  endif
-endfunction
-
-nnoremap \w :call WhichKeyToggle()<CR>
+set which-key
+set notimeout

@@ -12,6 +12,9 @@ export PYTHONPATH='/Users/mmocek/Library/Python/3.9/bin'
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$PYTHONPATH"
 
+export TTA_GUI="TFDGUI/xoh7Eih7fuchai9w@oda01tt.cloud.mgr-is.de:1521/az4.cloud.mgr-is.de"
+export TTD_GUI="TFDGUI/xoh7Eih7fuchai9w@oda01tt.cloud.mgr-is.de:1521/dz4.cloud.mgr-is.de"
+export TTT_GUI="TFDGUI/xoh7Eih7fuchai9w@oda01ose01.cloud.mgr-is.de:1521/tz4.cloud.mgr-is.de"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HYPHEN_INSENSITIVE="true"

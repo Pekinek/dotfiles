@@ -101,7 +101,7 @@ alt-comma = 'layout accordion horizontal vertical'
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
-alt-l = 'focus right'
+# alt-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -132,7 +132,6 @@ alt-m = 'workspace M'
 alt-p = 'workspace P'
 alt-q = 'workspace Q'
 alt-r = 'workspace R'
-alt-s = 'workspace S'
 alt-t = 'workspace T'
 alt-u = 'workspace U'
 alt-v = 'workspace V'
@@ -196,16 +195,18 @@ if.app-id = 'net.kovidgoyal.kitty'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
 run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= [
+  "layout tiling",
+]
 
 [workspace-to-monitor-force-assignment]
 1 = 1
