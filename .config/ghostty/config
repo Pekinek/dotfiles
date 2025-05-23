@@ -1,0 +1,4 @@
+theme = catppuccin-mocha
+font-family = "MesloLGS NF"
+background-opacity = 0.85
+background-blur-radius = 40
