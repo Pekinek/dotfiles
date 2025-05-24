@@ -7,7 +7,6 @@ local item_order = ""
 
 sbar.exec("aerospace list-workspaces --all", function(spaces)
 	for space_name in spaces:gmatch("[^\r\n]+") do
-		print("Adding space: " .. space_name)
 		local space = sbar.add("item", "space." .. space_name, {
 			icon = {
 				font = { family = settings.font.numbers },
@@ -66,7 +65,6 @@ sbar.exec("aerospace list-workspaces --all", function(spaces)
 				local icon_line = ""
 				for app in windows:gmatch("[^\r\n]+") do
 					no_app = false
-					print("Adding app: " .. app)
 					local lookup = app_icons[app]
 					local icon = ((lookup == nil) and app_icons["default"] or lookup)
 					icon_line = icon_line .. " " .. icon
